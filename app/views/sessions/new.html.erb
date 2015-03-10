@@ -10,9 +10,9 @@
       <%= f.password_field :password, :class => "form-control"%>
     </div>
     <label class="checkbox">
-      <input type="checkbox" value="remember-me"><%= t('sessions.rememberme')
+      <input type="checkbox" value="remember-me"><%= t('sessions.rememberme') %>
     </label>
-    <%= f.submit <%= t('sessions.submit'),  :class => "btn  btn-primary" %>
+    <%= f.submit t('sessions.submit'),  :class => "btn  btn-primary" %>
   <% end %>
   <%= render :partial => "devise/shared/links" %>
 </div>
