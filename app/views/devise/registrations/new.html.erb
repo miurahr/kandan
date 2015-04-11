@@ -1,6 +1,6 @@
 <div class="devise">
 
-<h2>Register an Account</h2>
+<h2><%= t('devise.registrations.register_account') %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -23,7 +23,7 @@
   <p><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.submit "Register" %></p>
+  <p><%= f.submit t('devise.registrations.register') %></p>
 <% end %>
 
 <p><%= render :partial => "devise/shared/links" %></p>

@@ -7,16 +7,16 @@
 
 <div class="container">
 	<div class="admin-main-area span12">
-		<h3>Site settings</h3>
+    <h3><%= t('admin.site_settings') %></h3>
 		<%= form_for @settings, :url => admin_update_path, :method => :post, :html => { :class => "" } do |f| %>
 		  <div class="control-group">
-		  	<%= f.label :max_rooms, 'Max number of rooms', :class => "control-label" %>
+		  	<%= f.label :max_rooms, t('admin.max_number_of_rooms'), :class => "control-label" %>
 		  	<div class="controls">
 		  		<%= f.number_field :max_rooms, :class => "input-mini" %>
 		  	</div>
 		  </div>
 		  <div class="control-group">
-		  	<%= f.label :public_site, 'Is this a public site?', :class => "control-label" %>
+		  	<%= f.label :public_site, t('admin.public_site'), :class => "control-label" %>
 		  	<div class="controls">
 		  		<%= f.check_box :public_site %>
 		  	</div>
@@ -27,7 +27,7 @@
 		<% end %>
 
 		<div class="waiting-for-approval-users">
-			<h3>Users waiting for approval</h3>
+      <h3><%= t('admin.users_waiting_approval')  %></h3>
 			<%= render "user_table", :users => @waiting_for_approval_users %>
 		</div>
 
