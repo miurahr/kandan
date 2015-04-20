@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   
+  before_filter :authenticate_user_from_token!, :except => :about
   before_filter :authenticate_user!, :except => :about
 
   skip_filter :force_approved_account, :only => :approval
